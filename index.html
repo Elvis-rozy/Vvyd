@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./app/stylesheets/style.css">
+  <title>Vvyd</title>
+</head>
+<body>
+  <aside class="left">
+    <span class="logo"></span>
+  </aside>
+  <section class="container">
+    <article class="top">
+      <span class="search-form">
+        <img src="images/icons/search.svg" alt="search icon">
+        <input class="search-bar" type="search" id="search-bar" name="search-bar" placeholder="Search">
+      </span>
+      <nav><ul class="nav">
+        <li class="link active" id="All">All</li>
+        <li class="link inactive" id="Art">Art</li>
+        <li class="link inactive" id="Tech">Tech</li>
+        <li class="link inactive" id="AI">AI</li>
+        <li class="link inactive" id="Nature">Nature</li>
+        <li class="link inactive" id="Lifestyle">Lifestyle</li>
+        <li class="link inactive" id="Dark">Dark</li>
+        <li class="link inactive" id="Abstract">Abstract</li>
+        <li class="link inactive" id="Anime">Anime</li>
+      </ul></nav>
+    </article>
+    <section class="preview hide">
+      <button class="back"><img src="./images/icons/arrow-left-short.svg" alt="back icon"/></button>
+      <article class="hidden">
+        <img id="jpeg" class="image" src="" alt="">
+        <a class="imgLink" href=""><button class="expand"><img src="./images/icons/arrows-angle-expand.svg" alt="expand icon"/></button></a>
+        <aside class="right">
+          <h1 class="name"></h1>
+          <a href="#" id="" class="download dwnBtn"><img src="./images/icons/download.svg" alt="download icon"/>Download</a>
+        </aside>
+      </article>
+    </section>
+    <main class="main"></main>
+    <button class="about"><img src="./images/icons/question.svg" alt=""/></button>
+  </section>
+  <script type="module" src="app/javascript/script.js"></script>
+</body>
+</html>

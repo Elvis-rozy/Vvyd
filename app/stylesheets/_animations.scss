@@ -1,0 +1,15 @@
+@keyframes display {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes size-in {
+  from {width: 0;}
+  to {width: 100%;}
+}
+
+@keyframes show {
+  0% {bottom: -55%; opacity: 0; filter: blur(50px); transform: scale(0);}
+  5% {bottom: -55%; opacity: 0; filter: blur(50px); transform: scale(0);}
+  80% {bottom: 2%; opacity: 1; filter: blur(5px); transform: scale(1);}
+  100% {bottom: 0; opacity: 1; filter: blur(0); transform: scale(1);}
+}
