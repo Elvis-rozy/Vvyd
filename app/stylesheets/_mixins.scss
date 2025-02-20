@@ -62,7 +62,7 @@
     width: 100dvw;
     align-items: flex-start;
     top: 14%;
-    height: 84dvh;
+    height: -webkit-fill-available;
   }
 
   body .container .preview .back {

@@ -1,11 +1,9 @@
-const navLinks = document.querySelector(".nav"), main = document.querySelector(".main"),
-preview = document.querySelector(".preview"), hidden = document.querySelector(".hidden"),
-image = document.querySelector(".image"), nam = document.querySelector(".name"),
-imgLink = document.querySelector(".imgLink"), back = document.querySelector(".back"),
-dwnBtn = document.querySelector(".dwnBtn"), links = document.querySelectorAll(".link");
-let point = 0, index = 0, clicked = false, result, nnn = [], photoUrl;
+const navLinks = document.querySelector(".nav"), main = document.querySelector(".main"), preview = document.querySelector(".preview"),
+hidden = document.querySelector(".hidden"), image = document.querySelector(".image"), nam = document.querySelector(".name"),
+imgLink = document.querySelector(".imgLink"), back = document.querySelector(".back"), dwnBtn = document.querySelector(".dwnBtn"), links = document.querySelectorAll(".link");
 const apiKey = "33f163ba12bf71d75c9721c662f4a2aa", userId = '200189408@N02', albumId = '72177720323931147';
 const url = `https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=${apiKey}&photoset_id=${albumId}&user_id=${userId}&format=json&nojsoncallback=1`;
+let point = 0, index = 0, clicked = false, result, nnn = [], photoUrl;
 
 function shuffleArray(arr) {
   return arr.sort(()=>Math.random() - 0.5);
@@ -68,6 +66,8 @@ function lots(e) {
   imgLink.href=e.target.currentSrc;
 }
 
+dwnBtn.addEventListener("click", (e)=>downloadImage(image.src))
+
 function filterArray(arr, searchA, searchB) {
   return arr.filter((element)=>element.name.includes(searchA) || element.name.includes(searchB));
 }
@@ -89,11 +89,13 @@ window.addEventListener("DOMContentLoaded", () => {
       });
       searchData.length>=1?displayImages(filterData):displayImages(nnn);
 
-      Array.from(document.getElementsByClassName("immg")).forEach((element)=>{
-        element.addEventListener("click", (e) => {
-          lots(e);
-        });
-      });
+      Array.from(document.getElementsByClassName("immg")).forEach(element=>element.addEventListener("click", (e)=>lots(e)));
+      Array.from(document.getElementsByClassName("download")).forEach((element)=>{
+        element.addEventListener("click", (e)=>{
+          const lnk = e.target.id;
+          downloadImage(lnk);
+        })
+      })
     })
     Array.from(document.getElementsByClassName("link")).forEach((element)=>{
 
@@ -106,13 +108,18 @@ window.addEventListener("DOMContentLoaded", () => {
         const img = shuffleArray(result);
         clicked==false?displayImages(nnn):displayImages(img);
         Array.from(document.getElementsByClassName("immg")).forEach(element=>element.addEventListener("click", (e)=>lots(e)));
+        Array.from(document.getElementsByClassName("download")).forEach((element)=>{
+          element.addEventListener("click", (e)=>{
+            const lnk = e.target.id;
+            downloadImage(lnk);
+          })
+        })
       })
     });
     Array.from(document.getElementsByClassName("immg")).forEach(element=>element.addEventListener("click", (e)=>lots(e)));
     Array.from(document.getElementsByClassName("download")).forEach((element)=>{
       element.addEventListener("click", (e)=>{
         const lnk = e.target.id;
-        dwnBtn.id=lnk;
         downloadImage(lnk);
       })
     })

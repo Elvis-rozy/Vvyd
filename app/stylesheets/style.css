@@ -93,7 +93,7 @@
     width: 100dvw;
     align-items: flex-start;
     top: 14%;
-    height: 84dvh;
+    height: -webkit-fill-available;
   }
   body .container .preview .back {
     top: 3%;
@@ -479,7 +479,7 @@ body .container .preview article .right h1 {
   color: #575656;
   width: 80%;
 }
-body .container .preview article .right .download {
+body .container .preview article .right .downld {
   width: 70%;
   font-size: 2.2dvh;
   color: white;
@@ -490,11 +490,13 @@ body .container .preview article .right .download {
   gap: 2dvh;
   justify-content: center;
   transition: 0.3s;
+  cursor: pointer;
+  padding: 1.5dvh;
 }
-body .container .preview article .right .download:hover {
+body .container .preview article .right .downld:hover {
   background: #858585;
 }
-body .container .preview article .right .download img {
+body .container .preview article .right .downld img {
   height: 3dvh;
 }
 
