@@ -73,7 +73,7 @@ function filterArray(arr, searchA, searchB) {
 }
 
 about.addEventListener("click", ()=>{
-  
+  console.log("about");
 })
 
 window.addEventListener("DOMContentLoaded", () => {

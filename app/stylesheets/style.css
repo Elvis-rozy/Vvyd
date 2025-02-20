@@ -116,7 +116,7 @@
   }
   body .container .preview article .image {
     width: 100%;
-    height: 80%;
+    height: auto;
   }
   body .container .preview article .expand {
     bottom: 25%;
@@ -125,6 +125,10 @@
     height: 2.4dvh;
   }
   body .container .preview article .right {
+    position: absolute;
+    height: 20%;
+    bottom: 0;
+    border-radius: 15px;
     width: 93%;
     gap: 2dvh;
   }
@@ -220,6 +224,10 @@
   body .container .preview article .right {
     width: 50%;
     gap: 10dvh;
+    position: relative;
+    height: 100%;
+    border-radius: none;
+    bottom: 0;
   }
   body .container .preview article .right h1 {
     font-size: 3dvh;
@@ -465,10 +473,10 @@ body .container .preview article .expand img {
 body .container .preview article .right {
   display: flex;
   align-items: center;
+  background: white;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  height: 100%;
 }
 body .container .preview article .right .heart {
   height: 3.5dvh;
