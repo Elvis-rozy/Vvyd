@@ -87,6 +87,9 @@ window.addEventListener("DOMContentLoaded", () => {
     //Search bar Function
     const categories = [ ...new Set(nnn.map((item)=> {return item;})) ];
     document.getElementById("search-bar").addEventListener("input", (e)=> {
+      preview.classList.replace("flex", "hide");
+      hidden.classList.replace("shown", "hidden");
+      
       const searchData = e.target.value.toLowerCase();
       const filterData = categories.filter((item)=> {
         if (item.name.toLocaleLowerCase().includes(searchData)){return (item.name.toLocaleLowerCase().includes(searchData));}
@@ -104,6 +107,9 @@ window.addEventListener("DOMContentLoaded", () => {
     Array.from(document.getElementsByClassName("link")).forEach((element)=>{
 
       element.addEventListener("click", (e) => {
+        preview.classList.replace("flex", "hide");
+        hidden.classList.replace("shown", "hidden");
+
         clicked = true;
         nnn = [];
         point = e.target.id.toLowerCase();
