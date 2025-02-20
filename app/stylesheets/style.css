@@ -64,7 +64,7 @@
   body .container .top .search-form {
     place-self: flex-end;
     width: 85%;
-    height: 4dvh;
+    height: 5dvh;
   }
   body .container .top .search-form img {
     left: 5%;
@@ -86,7 +86,13 @@
     -moz-columns: 2;
          columns: 2;
     gap: 2.5%;
-    top: 10.5%;
+    top: 12%;
+  }
+  body .container main .card .download::after {
+    right: -4.8dvw;
+    top: -1dvh;
+    width: 4dvw;
+    box-shadow: 0px 8px 0px white;
   }
   body .container .preview {
     left: 0;
@@ -175,6 +181,12 @@
     gap: 1.25%;
     top: 15%;
   }
+  body .container main .card .download::after {
+    right: -1.8dvw;
+    top: -1.65dvh;
+    width: 1.8dvw;
+    box-shadow: 0px 11px 0px white;
+  }
   body .container .preview {
     left: 5dvw;
     width: 95dvw;
@@ -218,7 +230,7 @@
   }
 }
 * {
-  font-family: Archivo, "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: Archivo, sans-serif;
   padding: 0;
   margin: 0;
   border: 0;
@@ -377,25 +389,14 @@ body .container main .card .download {
   bottom: 0;
   right: 10%;
 }
-body .container main .card .download::after, body .container main .card .download::before {
+body .container main .card .download::after {
   content: "";
   position: absolute;
   border-radius: 50%;
   background: transparent;
 }
 body .container main .card .download::after {
-  right: -1.8dvw;
-  top: -1.65dvh;
-  width: 1.8dvw;
   height: 3dvh;
-  box-shadow: 0px 11px 0px white;
-}
-body .container main .card .download::before {
-  left: -1.2dvw;
-  top: 0.83dvh;
-  box-shadow: 4px 5px white;
-  width: 0.9dvw;
-  height: 1.4dvh;
 }
 body .container main .card .download img {
   height: 2.3dvh;

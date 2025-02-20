@@ -1,5 +1,5 @@
 const navLinks = document.querySelector(".nav"), main = document.querySelector(".main"), preview = document.querySelector(".preview"),
-hidden = document.querySelector(".hidden"), image = document.querySelector(".image"), nam = document.querySelector(".name"),
+hidden = document.querySelector(".hidden"), image = document.querySelector(".image"), nam = document.querySelector(".name"), about = document.querySelector(".about"),
 imgLink = document.querySelector(".imgLink"), back = document.querySelector(".back"), dwnBtn = document.querySelector(".dwnBtn"), links = document.querySelectorAll(".link");
 const apiKey = "33f163ba12bf71d75c9721c662f4a2aa", userId = '200189408@N02', albumId = '72177720323931147';
 const url = `https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=${apiKey}&photoset_id=${albumId}&user_id=${userId}&format=json&nojsoncallback=1`;
@@ -71,6 +71,10 @@ dwnBtn.addEventListener("click", (e)=>downloadImage(image.src))
 function filterArray(arr, searchA, searchB) {
   return arr.filter((element)=>element.name.includes(searchA) || element.name.includes(searchB));
 }
+
+about.addEventListener("click", ()=>{
+  
+})
 
 window.addEventListener("DOMContentLoaded", () => {
 
