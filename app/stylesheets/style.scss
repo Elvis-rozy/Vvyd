@@ -217,10 +217,38 @@ body {
         }
       }      
     }
+
+    .aboutCard {
+      position: fixed;
+      right: 4%;
+      pointer-events: none;
+      bottom: 16%;
+      text-align: end;
+      backdrop-filter: blur(3px) brightness(0.67);
+      height: 40dvh;
+      padding: 3dvh 2dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 1.5dvh;
+      justify-content: center;
+      opacity: 0;
+
+      h2 {
+        font-size: 2.5dvh;
+        color: white;
+      }
     
+      p {
+        font-size: 2dvh;
+        color: white;
+      }
+    }
+
     .about {
       position: fixed;
       background: white;
+      transition: .3s;
       right: 4%;
       bottom: 5%;
       z-index: 2;
@@ -228,6 +256,10 @@ body {
     
       img {
         height: 5dvh;
+      }
+
+      &:hover {
+        background: #bbb9b9;
       }
     }
 
@@ -322,6 +354,10 @@ body {
 
 .flex {
   display: flex;
+}
+
+.display{
+  animation: display .5s linear forwards;
 }
 
 .shown {

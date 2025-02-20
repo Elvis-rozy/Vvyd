@@ -1,4 +1,4 @@
-const navLinks = document.querySelector(".nav"), main = document.querySelector(".main"), preview = document.querySelector(".preview"),
+const navLinks = document.querySelector(".nav"), main = document.querySelector(".main"), preview = document.querySelector(".preview"), aboutCard = document.querySelector(".aboutCard"),
 hidden = document.querySelector(".hidden"), image = document.querySelector(".image"), nam = document.querySelector(".name"), about = document.querySelector(".about"),
 imgLink = document.querySelector(".imgLink"), back = document.querySelector(".back"), dwnBtn = document.querySelector(".dwnBtn"), links = document.querySelectorAll(".link");
 const apiKey = "33f163ba12bf71d75c9721c662f4a2aa", userId = '200189408@N02', albumId = '72177720323931147';
@@ -67,14 +67,11 @@ function lots(e) {
 }
 
 dwnBtn.addEventListener("click", (e)=>downloadImage(image.src))
+about.addEventListener("click", ()=>aboutCard.classList.toggle("display"))
 
 function filterArray(arr, searchA, searchB) {
   return arr.filter((element)=>element.name.includes(searchA) || element.name.includes(searchB));
 }
-
-about.addEventListener("click", ()=>{
-  console.log("about");
-})
 
 window.addEventListener("DOMContentLoaded", () => {
 
@@ -89,7 +86,7 @@ window.addEventListener("DOMContentLoaded", () => {
     document.getElementById("search-bar").addEventListener("input", (e)=> {
       preview.classList.replace("flex", "hide");
       hidden.classList.replace("shown", "hidden");
-      
+
       const searchData = e.target.value.toLowerCase();
       const filterData = categories.filter((item)=> {
         if (item.name.toLocaleLowerCase().includes(searchData)){return (item.name.toLocaleLowerCase().includes(searchData));}

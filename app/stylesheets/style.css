@@ -94,6 +94,9 @@
     width: 4dvw;
     box-shadow: 0px 8px 0px white;
   }
+  .aboutCard {
+    width: 60dvw;
+  }
   body .container .preview {
     left: 0;
     width: 100dvw;
@@ -190,6 +193,9 @@
     top: -1.65dvh;
     width: 1.8dvw;
     box-shadow: 0px 11px 0px white;
+  }
+  .aboutCard {
+    width: 18dvw;
   }
   body .container .preview {
     left: 5dvw;
@@ -428,9 +434,35 @@ body .container main .card .download:hover h2 {
   animation: display 0.3s ease-in-out forwards;
   animation-delay: 0.3s;
 }
+body .container .aboutCard {
+  position: fixed;
+  right: 4%;
+  pointer-events: none;
+  bottom: 16%;
+  text-align: end;
+  -webkit-backdrop-filter: blur(3px) brightness(0.67);
+          backdrop-filter: blur(3px) brightness(0.67);
+  height: 40dvh;
+  padding: 3dvh 2dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.5dvh;
+  justify-content: center;
+  opacity: 0;
+}
+body .container .aboutCard h2 {
+  font-size: 2.5dvh;
+  color: white;
+}
+body .container .aboutCard p {
+  font-size: 2dvh;
+  color: white;
+}
 body .container .about {
   position: fixed;
   background: white;
+  transition: 0.3s;
   right: 4%;
   bottom: 5%;
   z-index: 2;
@@ -438,6 +470,9 @@ body .container .about {
 }
 body .container .about img {
   height: 5dvh;
+}
+body .container .about:hover {
+  background: #bbb9b9;
 }
 body .container .preview {
   position: fixed;
@@ -515,6 +550,10 @@ body .container .preview article .right .downld img {
 
 .flex {
   display: flex;
+}
+
+.display {
+  animation: display 0.5s linear forwards;
 }
 
 .shown {
