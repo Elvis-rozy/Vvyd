@@ -54,7 +54,7 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    padding: 1.5dvh;
+    padding: 1.5dvh 1.5dvw;
     left: 0;
   }
   .container .top {
@@ -90,10 +90,13 @@
     font-size: 1.7dvh;
   }
   body .container main {
+    width: 97dvw;
     -moz-columns: 2;
          columns: 2;
-    gap: 2.5%;
-    top: 12%;
+    gap: 2dvw;
+    top: 12dvh;
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
   body .container main .card .download::after {
     right: -4.8dvw;
@@ -206,6 +209,7 @@
          columns: 6;
     gap: 1.25%;
     top: 15%;
+    overflow: auto;
   }
   body .container main .card .download::after {
     right: -1.8dvw;
@@ -393,7 +397,6 @@ body .container .top nav ul li:hover {
 }
 body .container main {
   position: relative;
-  overflow: auto;
 }
 body .container main .card {
   width: 100%;

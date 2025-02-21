@@ -15,7 +15,7 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    padding: 1.5dvh;
+    padding: 1.5dvh 1.5dvw;
     left: 0;
   }
 
@@ -59,9 +59,13 @@
   }
       
   body .container main {
+    width: 97dvw;
     columns: 2;
-    gap: 2.5%;
-    top: 12%;
+    gap: 2dvw;
+    top: 12dvh;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 
   body .container main .card .download::after{
@@ -196,6 +200,7 @@
     columns: 6;
     gap: 1.25%;
     top: 15%;
+    overflow: auto;
   }
 
   body .container main .card .download::after{
