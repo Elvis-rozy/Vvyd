@@ -162,6 +162,9 @@
     width: 30%;
     bottom: 0;
   }
+  .home::before {
+    content: "";
+  }
 }
 @media (min-width: 1024px) {
   body .left {
@@ -276,6 +279,9 @@
     width: 5dvw;
     z-index: 3;
     bottom: 3%;
+  }
+  .home::before {
+    content: none;
   }
 }
 * {
@@ -462,6 +468,7 @@ body .container main .card .download::after {
   position: absolute;
   border-radius: 50%;
   background: transparent;
+  pointer-events: none;
 }
 body .container main .card .download img {
   height: 2.3dvh;
@@ -494,6 +501,17 @@ body .container .home {
 body .container .home img {
   height: 3dvh;
   pointer-events: none;
+}
+body .container .home::before {
+  position: absolute;
+  width: 7dvh;
+  height: 4dvh;
+  right: -51%;
+  pointer-events: none;
+  bottom: -2%;
+  background: transparent;
+  box-shadow: -15px 15px white;
+  border-radius: 0 0 0 50%;
 }
 body .container .aboutCard {
   position: fixed;

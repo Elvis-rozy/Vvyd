@@ -207,6 +207,7 @@ body {
             position: absolute;
             border-radius: 50%;
             background: transparent;
+            pointer-events: none;
           }
         
           img {
@@ -248,6 +249,18 @@ body {
       img {
         height: 3dvh;
         pointer-events: none;
+      }
+
+      &::before {
+        position: absolute;
+        width: 7dvh;
+        height: 4dvh;
+        right: -51%;
+        pointer-events: none;
+        bottom: -2%;
+        background: transparent;
+        box-shadow: -15px 15px white;
+        border-radius: 0 0 0 50%;
       }
     }
 

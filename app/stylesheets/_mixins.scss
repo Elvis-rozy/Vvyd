@@ -140,6 +140,10 @@
     box-shadow: -1px 2px 9px 0px rgba(0, 0, 0, 0.3803921);
     width: 30%;
     bottom: 0;
+
+    &::before{
+      content: "";
+    }
   }
 }
 
@@ -278,5 +282,9 @@
     width: 5dvw;
     z-index: 3;
     bottom: 3%;
+
+    &::before{
+      content: none;
+    }
   }
 }
