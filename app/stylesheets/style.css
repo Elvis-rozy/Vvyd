@@ -309,13 +309,22 @@ body .left .logo {
   transform: rotate(40deg);
   cursor: pointer;
 }
-body .left .logo::before {
+body .left .logo::before, body .left .logo::after {
   content: "";
   position: absolute;
   width: 100%;
-  background: black;
+}
+body .left .logo::before {
+  background: #9f7c29;
   right: 155%;
   height: 80%;
+}
+body .left .logo::after {
+  right: 264%;
+  height: 60%;
+  top: 40%;
+  background: black;
+  transform: rotate(-86deg);
 }
 body .container {
   right: 0;
@@ -495,7 +504,8 @@ body .container .about img {
   height: 5dvh;
 }
 body .container .about:hover {
-  background: #bbb9b9;
+  background: #edeaea;
+  box-shadow: none;
 }
 body .container .preview {
   position: fixed;

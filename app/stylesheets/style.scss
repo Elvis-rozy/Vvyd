@@ -56,13 +56,24 @@ body {
       transform: rotate(40deg);
       cursor: pointer;
 
-      &::before {
+      &::before, &::after {
         content: "";
         position: absolute;
         width: 100%;
-        background: black;
+      }
+      
+      &::before {
+        background: #9f7c29;
         right: 155%;
         height: 80%;
+      }
+
+      &::after {
+        right: 264%;
+        height: 60%;
+        top: 40%;
+        background: black;
+        transform: rotate(-86deg);
       }
     }
   }
@@ -273,7 +284,8 @@ body {
       }
 
       &:hover {
-        background: #bbb9b9;
+        background: #edeaea;
+        box-shadow: none;
       }
     }
 
