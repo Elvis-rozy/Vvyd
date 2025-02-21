@@ -456,11 +456,11 @@ body .container main .card .download {
   transition: 0.3s;
   cursor: pointer;
   gap: 1dvh;
-  width: 6dvh;
-  height: 6dvh;
+  width: 7dvh;
+  height: 7dvh;
   background: black;
   border: 5px solid white;
-  bottom: 0;
+  bottom: -2%;
   right: 10%;
 }
 body .container main .card .download::after {
