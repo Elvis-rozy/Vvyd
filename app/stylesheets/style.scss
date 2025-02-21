@@ -253,11 +253,11 @@ body {
 
       &::before {
         position: absolute;
-        width: 7dvh;
+        width: 7dvw;
         height: 4dvh;
-        right: -51%;
+        right: -7dvw;
         pointer-events: none;
-        bottom: -2%;
+        bottom: -3%;
         background: transparent;
         box-shadow: -15px 15px white;
         border-radius: 0 0 0 50%;
