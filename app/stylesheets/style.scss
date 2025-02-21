@@ -241,6 +241,18 @@ body {
         }
       }      
     }
+    
+    .home {
+      position: fixed;
+      z-index: 3;
+      left: 0;
+      padding: 1.5dvh;
+
+      img {
+        height: 3dvh;
+        pointer-events: none;
+      }
+    }
 
     .aboutCard {
       position: fixed;

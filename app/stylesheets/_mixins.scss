@@ -127,6 +127,14 @@
     height: auto;
     padding: 1.5dvh 0;
   }
+  
+  .home {
+    background: white;
+    border-radius: 0 30px 30px 0;
+    box-shadow: -1px 2px 9px 0px rgba(0, 0, 0, 0.3803921);
+    width: 30%;
+    bottom: 0;
+  }
 }
 
 //Desktop Only Setup
@@ -255,4 +263,12 @@
     padding: none;
   }
 
+  .home {
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    width: 5dvw;
+    z-index: 3;
+    bottom: 3%;
+  }
 }

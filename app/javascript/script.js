@@ -1,7 +1,7 @@
 const navLinks = document.querySelector(".nav"), main = document.querySelector(".main"), preview = document.querySelector(".preview"), aboutCard = document.querySelector(".aboutCard"),
 hidden = document.querySelector(".hidden"), image = document.querySelector(".image"), nam = document.querySelector(".name"), about = document.querySelector(".about"),
-imgLink = document.querySelector(".imgLink"), back = document.querySelector(".back"), dwnBtn = document.querySelector(".dwnBtn"), links = document.querySelectorAll(".link");
-const apiKey = "33f163ba12bf71d75c9721c662f4a2aa", userId = '200189408@N02', albumId = '72177720323931147';
+imgLink = document.querySelector(".imgLink"), back = document.querySelector(".back"), dwnBtn = document.querySelector(".dwnBtn"), links = document.querySelectorAll(".link"),
+home = document.querySelector(".home"), homeImg = document.querySelector(".homeImg"); const apiKey = "33f163ba12bf71d75c9721c662f4a2aa", userId = '200189408@N02', albumId = '72177720323931147';
 const url = `https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=${apiKey}&photoset_id=${albumId}&user_id=${userId}&format=json&nojsoncallback=1`;
 let point = 0, index = 0, clicked = false, result, nnn = [], photoUrl;
 
@@ -10,9 +10,10 @@ function shuffleArray(arr) {
 }
 
 links.forEach((link)=>{
-  link.addEventListener("click", ()=>{
+  link.addEventListener("click", (e)=>{
     links.forEach(otherlink=>otherlink.classList.replace("active", "inactive"))
     link.classList.replace("inactive", "active");
+    e.target.id=="All"?homeImg.src="./images/icons/house-door-fill2.svg":homeImg.src="./images/icons/house-door-fill.svg";
   })
 })
 
