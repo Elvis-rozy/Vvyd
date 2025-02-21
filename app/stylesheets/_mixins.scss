@@ -45,6 +45,13 @@
     
   body .container .top nav ul  {
     width: 100%;
+    display: grid;
+    grid-auto-columns: 18%;
+    grid-auto-flow: column;
+    gap: 2dvh;
+    place-items: center;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
   }
     
   body .container .top nav ul li {
@@ -166,6 +173,11 @@
     
   body .container .top nav ul  {
     width: 70%;
+    display: flex;
+    gap: 2dvh;
+    place-items: center;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
   }
     
   body .container .top nav ul li {

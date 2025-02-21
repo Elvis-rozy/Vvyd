@@ -78,6 +78,13 @@
   }
   body .container .top nav ul {
     width: 100%;
+    display: grid;
+    grid-auto-columns: 18%;
+    grid-auto-flow: column;
+    gap: 2dvh;
+    place-items: center;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
   }
   body .container .top nav ul li {
     font-size: 1.7dvh;
@@ -178,6 +185,11 @@
   }
   body .container .top nav ul {
     width: 70%;
+    display: flex;
+    gap: 2dvh;
+    place-items: center;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
   }
   body .container .top nav ul li {
     font-size: 2dvh;
@@ -342,7 +354,6 @@ body .container .top nav {
   height: 5dvh;
 }
 body .container .top nav ul {
-  display: flex;
   justify-content: space-between;
   height: 100%;
   align-items: center;
@@ -368,6 +379,17 @@ body .container main .card {
   transition: 0.3s;
   padding: 3dvh 0;
   cursor: pointer;
+}
+body .container main .card:hover .download {
+  width: 80%;
+}
+body .container main .card:hover .download img {
+  visibility: hidden;
+}
+body .container main .card:hover .download h2 {
+  transition: 0.5s;
+  animation: display 0.3s ease-in-out forwards;
+  animation-delay: 0.3s;
 }
 body .container main .card:hover span .image {
   transform: scale(1.05);
@@ -457,6 +479,7 @@ body .container .aboutCard h2 {
 }
 body .container .aboutCard p {
   font-size: 2dvh;
+  line-height: 2.8dvh;
   color: white;
 }
 body .container .about {
@@ -569,7 +592,7 @@ body .container .preview article .right .downld img {
   position: absolute;
   width: 0;
   height: 0.4dvh;
-  bottom: -50%;
+  bottom: -60%;
   animation: size-in 0.5s ease-in forwards;
   background: #9f7c29;
 }

@@ -107,7 +107,6 @@ body {
         height: 5dvh;
       
         ul {
-          display: flex;
           justify-content: space-between;
           height: 100%;
           align-items: center;
@@ -139,6 +138,20 @@ body {
         cursor: pointer;
         
         &:hover {
+
+          .download {
+            width: 80%;
+            
+            img {
+              visibility: hidden;
+            }
+
+            h2 {
+              transition: .5s;
+              animation: display .3s ease-in-out forwards;
+              animation-delay: .3s;              
+            }
+          }
 
           span .image {
             transform: scale(1.05);
@@ -241,6 +254,7 @@ body {
     
       p {
         font-size: 2dvh;
+        line-height: 2.8dvh;
         color: white;
       }
     }
@@ -373,7 +387,7 @@ body {
     position: absolute;
     width: 0;
     height: .4dvh;
-    bottom: -50%;
+    bottom: -60%;
     animation: size-in .5s ease-in forwards;
     background: #9f7c29;
   }
