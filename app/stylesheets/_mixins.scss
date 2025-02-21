@@ -66,6 +66,7 @@
 
     overflow-x: hidden;
     overflow-y: scroll;
+    height: max-content;
   }
 
   body .container main .card .download::after{

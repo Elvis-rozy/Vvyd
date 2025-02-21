@@ -97,6 +97,8 @@
     top: 12dvh;
     overflow-x: hidden;
     overflow-y: scroll;
+    height: -moz-max-content;
+    height: max-content;
   }
   body .container main .card .download::after {
     right: -4.8dvw;
