@@ -139,6 +139,7 @@ body {
 
     main {
       position: relative;
+      overflow: auto;
 
       .card {
         width: 100%;
@@ -236,6 +237,9 @@ body {
       z-index: 3;
       left: 0;
       padding: 1.5dvh;
+      opacity: 0;
+      animation: display 1s linear forwards;
+      animation-delay: 1s;
 
       img {
         height: 3dvh;
@@ -288,7 +292,9 @@ body {
       background: white;
       transition: .3s;
       right: 4%;
-      bottom: 5%;
+      bottom: -55%;
+      animation: popUp 2s ease-in forwards;
+      animation-delay: 4s;
       z-index: 2;
       box-shadow: 0px -2px 9px 0px #00000061;
     

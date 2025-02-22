@@ -1,3 +1,7 @@
+@keyframes popUp {
+  from {bottom: -55%;}
+  to {bottom: 5%;}
+}
 @keyframes display {
   from {opacity: 0;}
   to {opacity: 1;}
