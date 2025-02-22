@@ -95,17 +95,8 @@
          columns: 2;
     gap: 2dvw;
     top: 12dvh;
-    overflow-x: hidden;
-    overflow-y: scroll;
     height: -moz-max-content;
     height: max-content;
-  }
-  body .container main .card .download::after {
-    right: -5.3dvw;
-    top: -0.4dvh;
-    width: 5dvw;
-    height: 2dvh;
-    box-shadow: 0px 8px 0px white;
   }
   .aboutCard {
     width: 60dvw;
@@ -171,7 +162,6 @@
     width: 5dvw;
     height: 100%;
     border-right: 1px solid #d5d5d5;
-    background: #f9f8f8;
     padding-top: 4dvh;
   }
   body .container {
@@ -215,14 +205,6 @@
          columns: 6;
     gap: 1.25%;
     top: 15%;
-    overflow: auto;
-  }
-  body .container main .card .download::after {
-    right: -1.9dvw;
-    top: -1.65dvh;
-    width: 1.8dvw;
-    height: 3dvh;
-    box-shadow: 0px 11px 0px white;
   }
   .aboutCard {
     width: 18dvw;
@@ -462,13 +444,6 @@ body .container main .card .download {
   border: 5px solid white;
   bottom: -2%;
   right: 10%;
-}
-body .container main .card .download::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  background: transparent;
-  pointer-events: none;
 }
 body .container main .card .download img {
   height: 2.3dvh;
