@@ -1,5 +1,5 @@
-const navLinks = document.querySelector(".nav"), main = document.querySelector(".main"), preview = document.querySelector(".preview"), aboutCard = document.querySelector(".aboutCard"),
-hidden = document.querySelector(".hidden"), image = document.querySelector(".image"), nam = document.querySelector(".name"), about = document.querySelector(".about"),
+const navLinks = document.querySelector(".nav"), main = document.querySelector(".main"), preview = document.querySelector(".preview"), aboutCard = document.querySelector(".aboutCard"), body = document.getElementById("body"),
+hidden = document.querySelector(".hidden"), image = document.querySelector(".image"), nam = document.querySelector(".name"), about = document.querySelector(".about"), darkmode = document.querySelector(".darkmode"),
 imgLink = document.querySelector(".imgLink"), back = document.querySelector(".back"), dwnBtn = document.querySelector(".dwnBtn"), links = document.querySelectorAll(".link"),
 home = document.querySelector(".home"), homeImg = document.querySelector(".homeImg"); const apiKey = "33f163ba12bf71d75c9721c662f4a2aa", userId = '200189408@N02', albumId = '72177720323931147';
 const url = `https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=${apiKey}&photoset_id=${albumId}&user_id=${userId}&format=json&nojsoncallback=1`;
@@ -67,6 +67,10 @@ function lots(e) {
   imgLink.href=e.target.currentSrc;
 }
 
+darkmode.addEventListener("click", (e)=>{
+  body.classList.toggle("darkMode");
+  body.classList.contains("darkMode")?darkmode.innerHTML="Light Mode":darkmode.innerHTML="Dark Mode";
+})
 dwnBtn.addEventListener("click", (e)=>downloadImage(image.src))
 about.addEventListener("click", ()=>aboutCard.classList.toggle("display"))
 

@@ -9,7 +9,7 @@
   text-decoration: none;
   box-sizing: border-box;
   list-style: none;
-  color: var(--live);
+  color: black;
   font-size: 16px;
   font-weight: 100;
 }
@@ -266,8 +266,7 @@ body {
       bottom: 16%;
       text-align: end;
       backdrop-filter: blur(3px) brightness(0.67);
-      height: 40dvh;
-      padding: 3dvh 2dvh;
+      padding: 5dvh 2dvh;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
@@ -279,11 +278,18 @@ body {
         font-size: 2.5dvh;
         color: white;
       }
-    
+      
       p {
         font-size: 2dvh;
         line-height: 2.8dvh;
         color: white;
+      }
+      
+      .darkmode {
+        pointer-events: all;
+        background: black;
+        color: white;
+        padding: 1dvh 2dvh;
       }
     }
 
@@ -316,15 +322,11 @@ body {
 
       .back {
         position: absolute;
-        background: #ababab;
+        background: black;
         z-index: 2;
 
         &:hover {
-          background: #858585;
-        }
-
-        img {
-          height: 4dvh;
+          background: #9f7c29;
         }
       }
 
@@ -350,6 +352,7 @@ body {
           background: white;
           justify-content: center;
           flex-direction: column;
+          box-shadow: 0px -2px 9px 0px rgba(0, 0, 0, 0.3803921569);
           text-align: center;
 
 
@@ -361,15 +364,16 @@ body {
           }
 
           h1 {
-            color: #575656;
             width: 80%;
+            font-weight: 700;
+            text-transform: capitalize;
           }
 
           .downld {
             width: 70%;
             font-size: 2.2dvh;
             color: white;
-            background: #ababab;
+            background: black;
             border-radius: 30px;
             display: flex;
             align-items: center;
@@ -380,7 +384,7 @@ body {
             padding: 1.5dvh;
 
             &:hover {
-              background: #858585;
+              background: #a17f2e;
             }
 
             img {
