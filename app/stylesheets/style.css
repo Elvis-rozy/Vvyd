@@ -579,6 +579,7 @@ body .container .aboutCard .darkmode {
   pointer-events: all;
   background: black;
   color: white;
+  font-size: 2dvh;
   padding: 1dvh 2dvh;
 }
 body .container .about {
