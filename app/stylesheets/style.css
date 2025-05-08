@@ -448,6 +448,8 @@ body .container .top nav ul li {
   cursor: pointer;
   transition: 0.3s;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 body .container .top nav ul li:hover {
   color: #9f7c29;
