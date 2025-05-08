@@ -19,7 +19,7 @@
     width: 0;
   }
   to {
-    width: 100%;
+    width: 7dvw;
   }
 }
 @keyframes show {
@@ -49,6 +49,9 @@
   }
 }
 @media (max-width: 950px) {
+  .active::before {
+    content: "";
+  }
   body .left {
     height: 6%;
     width: 15dvw;
@@ -169,6 +172,9 @@
   }
 }
 @media (min-width: 951px) {
+  .active::before {
+    content: none;
+  }
   body .left {
     width: 5dvw;
     height: 100%;
@@ -690,7 +696,6 @@ body .container .preview article .right .downld img {
   color: #9f7c29;
 }
 .active::before {
-  content: "";
   position: absolute;
   width: 0;
   height: 0.4dvh;

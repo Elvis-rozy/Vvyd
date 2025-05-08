@@ -1,5 +1,11 @@
 //Tablet and Mobile Only Setup  
 @media (max-width: 950px) {
+
+  .active { 
+    &::before {
+      content: "";
+    }
+  }
   
   body .left {
     height: 6%;
@@ -142,6 +148,12 @@
 
 //Desktop Only Setup
 @media (min-width: 951px) {
+
+  .active { 
+    &::before {
+      content: none;
+    }
+  }
 
   body .left {
     width: 5dvw;
